@@ -1,0 +1,43 @@
+@forward "variables";
+@use "variables" as var;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  @include madia.deviceBreakPoint() {
+    &:not(:first-child) {
+      width: 100%;
+    }
+  }
+}
+
+body, dt {
+  font-family: var.$font-base;
+  color: var.$colorBlack;
+}
+
+dd {
+  font-family: var.$font-base;
+  color: var.$colorBlack;
+  font-size: 16px;
+  font-weight: 400;
+  @include madia.deviceBreakPoint() {
+    font-size: var.$fontSize-12To16;
+  }
+}
+
+
+@include madia.deviceBreakPoint() {}
+span, time {
+  font-size: var.$fontSize-12To16;
+}
+
+

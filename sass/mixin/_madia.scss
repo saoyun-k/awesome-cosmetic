@@ -1,0 +1,7 @@
+$breakPoint: 1025px;
+
+@mixin deviceBreakPoint() {
+  @media screen and (max-width: $breakPoint) {
+    @content;
+  }
+}

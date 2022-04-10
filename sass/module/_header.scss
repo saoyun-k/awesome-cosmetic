@@ -1,0 +1,97 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 90px;
+  @include madia.deviceBreakPoint() {
+    padding-left: 21px;
+    }
+}
+
+.drawer-hamburger {
+  display: none;
+}
+
+.drawer--right .drawer-nav {
+  right: -80%;
+}
+
+.drawer-nav {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  overflow: visible;
+}
+
+.drawer-menu {
+  display: flex;
+}
+
+.drawer-menu-item:hover {
+  text-decoration: none;
+}
+
+.drawer-menu li .drawer-menu-item {
+  position: relative;
+  display: inline;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: var.$colorWhite;
+}
+
+.heading3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.siteLogo {
+  height: 80px;
+  line-height: 145px;
+  padding-left: 1.5rem;
+  @include madia.deviceBreakPoint() {
+    position: fixed;
+  }
+}
+
+.drawer-menu li {
+  &:last-child {
+    padding-right: 1.5rem;
+  }
+
+  &:not(:last-child) {
+    padding-right: 3.25rem;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background-color: var.$colorWhite;
+    transform: scaleX(0);
+    transform-origin: right top;
+    transition: transform .5s;
+  }
+}
+
+.drawer--right.drawer-open .drawer-menu li a::after {
+  background-color: var.$colorBlack;
+}
+
+.drawer-menu li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left top;
+}

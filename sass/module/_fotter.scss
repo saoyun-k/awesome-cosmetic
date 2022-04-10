@@ -1,0 +1,33 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+/* ----------footer--------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 219px;
+  background-color: var.$colorfooter;
+  @include madia.deviceBreakPoint() {
+    text-align: center;
+    margin-top: 43px;
+    .footerContent {
+      width: 100%;
+    }
+  }
+  .footerLogo {
+    padding: 32px 0;
+    letter-spacing: .05em;
+    line-height: 2.5;
+    font-size: 80px;
+    font-weight: bold;
+    color: var.$colorWhite;
+    @include madia.deviceBreakPoint() {
+      font-size: var.$fontSize-40To80;
+    }
+  }
+}

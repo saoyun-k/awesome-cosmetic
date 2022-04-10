@@ -1,0 +1,21 @@
+// @forward "../config/variables";
+@use "../config/variables" as var;
+
+@mixin contentTitle-h2 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  letter-spacing: .02em;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+@mixin contentTitle-h2-after($left) {
+  content: "";
+  position: absolute;
+  left: $left;
+  bottom: 0;
+  width: 69px;
+  height: 4px;
+  background-color: var.$colorBlack;
+}

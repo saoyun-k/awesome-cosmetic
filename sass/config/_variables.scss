@@ -1,0 +1,15 @@
+$font-base: "Montserrat", "游ゴシック体", sans-serif;
+
+$colorBlack: #000000;
+$colorWhite: #FFFFFF;
+$colorLightgray: #F2F2F2;
+$colorGray: #707070;
+$colorfooter: #6F6565;
+
+$fontSize-12To16: calc(0.75rem + ((1vw - 3.75px) * 0.6154));
+$fontSize-16To24: calc(1rem + ((1vw - 3.75px) * 1.2308));
+$fontSize-18To24: calc(1.125rem + ((1vw - 3.75px) * 0.9231));
+$fontSize-20To24: calc(1.25rem + ((1vw - 3.75px) * 0.6154));
+$fontSize-38To48: calc(2.375rem + ((1vw - 3.75px) * 1.5385));
+$fontSize-40To60: calc(2.5rem + ((1vw - 3.75px) * 3.6923));
+$fontSize-40To80: calc(2.5rem + ((1vw - 3.75px) * 6.1538));
